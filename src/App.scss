@@ -1,0 +1,30 @@
+@use "./assets/scss/base";
+@use "./assets/scss/layouts";
+
+.app {
+   margin: auto;
+   height: 100vh;
+   width: 80vw;
+   header {
+      width: 100%; 
+      height: 30%;
+      background-image: url("./assets/images/brewdog_header_logo.jpg");
+      background-position: center;
+      background-size: cover;
+   }
+   nav {
+      width: 30%;
+      height:70%;
+      border: 1px solid black;
+   };
+   main {
+      width: 70%;
+      height:70%;
+      border: 1px solid red;
+   }
+}
+
+img {
+   width: 100%;
+   height: auto;
+}
