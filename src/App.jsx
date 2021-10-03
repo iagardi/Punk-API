@@ -1,13 +1,16 @@
-import headerLogo from './assets/images/brewdog_header_logo.jpg';
+import React from 'react'
 import './App.scss';
+import logo from "./assets/images/brewdog_logo.png"
+import Nav from './components/Nav/Nav';
 
 const App = () => {
   return <>
     <div className="app">
-      <header></header>
-      <nav></nav>
-      <main></main>
+      <header className="header"><img src={logo} alt="logo" className="header__logo" /></header>
+      <div className="body">
+        <Nav />
       </div>
+    </div>
   </>
 };
 
