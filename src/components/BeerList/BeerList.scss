@@ -1,0 +1,49 @@
+@use '../../assets/scss/_base.scss'as *;
+
+.beerlist {
+   flex: 1;
+   display: flex;
+   flex-wrap: wrap;
+   overflow-y: auto;
+
+   &__card {
+      margin: 45px;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      border: 1px solid $color-main;
+      padding: 10px;
+
+      &--name {
+         color: $color-main;
+         text-align: center;
+      }
+
+      &--tagline {
+         color: $color-main;
+         text-align: center;
+      }
+
+      &--image {
+         height: 80px;
+         object-fit: scale-down;
+         width: auto;
+      }
+
+      &--description {
+         text-align: center;
+         overflow-y: auto;
+         color: $color-main;
+      }
+   }
+
+}
+
+@media (min-width: 992px) {
+   .beerlist {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+
+   }
+}
