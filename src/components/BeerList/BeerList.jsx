@@ -7,6 +7,7 @@ const BeerList = (props) => {
    const { beersArr } = props
 
    const beerListJSX = beersArr.map((beer, index) => {
+
       return (
          < div className="beerlist__card" key={beer.name + 1}>
             <h2 className="beerlist__card--name">{beer.name}</h2>
@@ -20,7 +21,9 @@ const BeerList = (props) => {
 
 
    return (
-      <div className="beerlist">{beerListJSX}</div>
+      <div className="beerlist">{beerListJSX}
+
+      </div>
    )
 }
 
