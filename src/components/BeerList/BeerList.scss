@@ -7,25 +7,29 @@
    overflow-y: auto;
 
    &__card {
-      margin: 45px;
+      margin: 40px;
+      height: 40vh;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       overflow-y: auto;
-      border: 1px solid $color-main;
+      border: 3px solid $color-main;
+      border-radius: 25px;
       padding: 10px;
+      background-color: transparent;
 
       &--name {
-         color: $color-main;
+         color: $color-font;
          text-align: center;
       }
 
       &--tagline {
-         color: $color-main;
+         color: $color-font;
          text-align: center;
       }
 
       &--image {
-         height: 80px;
+         height: 60%;
          object-fit: scale-down;
          width: auto;
       }
@@ -33,7 +37,7 @@
       &--description {
          text-align: center;
          overflow-y: auto;
-         color: $color-main;
+         color: $color-font;
       }
    }
 

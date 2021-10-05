@@ -1,8 +1,9 @@
 $color-main: #009BC9;
-
+$color-font: #000000;
 
 * {
    padding: 0px;
    margin: 0px;
    box-sizing: border-box;
+   color: $color-font;
 }
