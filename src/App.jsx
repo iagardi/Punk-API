@@ -8,6 +8,13 @@ import Nav from './components/Nav/Nav';
 const App = () => {
   const [count, setCount] = useState(0)
   const [beers, setBeers] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("")
+
+  const handleInput = event => {
+    const input = event.target.value.toLowerCase()
+    console.log(input)
+    setSearchTerm(input)
+  }
 
   const getBeers = () => {
     fetch("https://api.punkapi.com/v2/beers?per_page=80")
@@ -17,6 +24,10 @@ const App = () => {
         console.log(data)
       })
   }
+
+  const filteredBeers = beers.filter(beer => {
+    return beer.name.toLowerCase().includes(searchTerm)
+  })
 
   useEffect(() => {
     getBeers()
@@ -28,8 +39,8 @@ const App = () => {
     <div className="app">
       <header className="header"><img src={logo} alt="logo" className="header__logo" /></header>
       <div className="body">
-        <Nav />
-        <BeerList beersArr={beers} />
+        <Nav handleInput={handleInput} />
+        <BeerList beersArr={(filteredBeers.length !== 0) ? filteredBeers : beers} />
       </div>
     </div>
   </>

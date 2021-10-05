@@ -3,10 +3,13 @@ import Search from '../Search/Search'
 import FilterList from '../FilterList/FilterList'
 import './Nav.scss'
 
-function Nav() {
+const Nav = (props) => {
+   const { searchTerm, handleInput } = props
+
+
    return (
       <div className="navbar">
-         <Search />
+         <Search searchTerm={searchTerm} handleInput={handleInput} />
          <FilterList />
 
 
