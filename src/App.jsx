@@ -12,7 +12,6 @@ const App = () => {
 
   const handleInput = event => {
     const input = event.target.value.toLowerCase()
-    console.log(input)
     setSearchTerm(input)
   }
 
@@ -20,8 +19,7 @@ const App = () => {
     fetch("https://api.punkapi.com/v2/beers?per_page=80")
       .then((response) => response.json())
       .then((data) => {
-        setBeers(data)
-        console.log(data)
+        setBeers(data.filter(beer => { return beer.image_url !== "https://images.punkapi.com/v2/keg.png" }))
       })
   }
 
@@ -33,14 +31,12 @@ const App = () => {
     getBeers()
   }, [count])
 
-
-
   return <>
     <div className="app">
       <header className="header"><img src={logo} alt="logo" className="header__logo" /></header>
       <div className="body">
         <Nav handleInput={handleInput} />
-        <BeerList beersArr={(filteredBeers.length !== 0) ? filteredBeers : beers} />
+        <BeerList beersArr={filteredBeers} />
       </div>
     </div>
   </>

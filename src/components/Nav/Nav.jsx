@@ -11,8 +11,6 @@ const Nav = (props) => {
       <div className="navbar">
          <Search searchTerm={searchTerm} handleInput={handleInput} />
          <FilterList />
-
-
       </div>
    )
 }
