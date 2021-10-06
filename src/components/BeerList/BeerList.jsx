@@ -1,6 +1,5 @@
 import React from 'react'
 import BeerCard from '../BeerCard/BeerCard'
-import Button from '../Button/Button'
 
 import './BeerList.scss'
 
