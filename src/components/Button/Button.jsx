@@ -3,9 +3,9 @@ import React from 'react'
 import './Button.scss'
 
 const Button = (props) => {
-   const { buttonText } = props
+   const { buttonText, action } = props
    return (
-      <button className="button">{buttonText}</button>
+      <button className="button" onClick={action}>{buttonText}</button>
    )
 }
 

@@ -16,11 +16,11 @@ const BeerCard = (props) => {
    }
 
    const infoJSX = (
-      <div className="beerlist_info">
+      <div className="beerlist__info">
          <p>First brewed: {beer.first_brewed}</p>
          <p>Description: {beer.description}</p>
          <p>ABV: {beer.abv}%</p>
-         <Button buttonText="Cool thanks" onClick={handleClick} />
+         <Button buttonText="Cool thanks" action={handleClick} />
       </div >
    )
 
@@ -30,7 +30,7 @@ const BeerCard = (props) => {
          <img className="beerlist__card--image" src={beer.image_url} alt={beer.name} />
          <h3 className="beerlist__card--tagline">{beer.tagline}</h3>
          {showInfo ? infoJSX : null}
-         <Button buttonText="Read more" onClick={handleClick} />
+         <Button buttonText="Read more" action={handleClick} />
       </div >
    )
 }
