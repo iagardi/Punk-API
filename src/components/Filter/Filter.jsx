@@ -1,15 +1,16 @@
 import React from 'react'
 import './Filter.scss'
 
-function Filter() {
-
+const Filter = (props) => {
+   const { filterText, handleTick, term } = props
 
    return (
-      <div className="navbar__filter">
-         <label htmlFor="filter--checkbox" className="navbar__filter--label">Filter this</label>
-         <input type="checkbox" className="filter--checkbox" />
-      </div>
+      <div className="navbar__filter" >
+         <label htmlFor={filterText} className="navbar__filter--label">{filterText}</label>
+         <input type="checkbox" id={term} className="filter--checkbox" value={filterText} onClick={handleTick} />
+      </div >
    )
 }
 
 export default Filter
+

@@ -1,14 +1,17 @@
 import React from 'react'
 import Filter from '../Filter/Filter'
 
-const FilterList = () => {
+const FilterList = (props) => {
+   const { handleTick } = props
+
+
+
    return (
-      <div className="navbar__filters">
-         <Filter />
-         <Filter />
-         <Filter />
-         <Filter />
-      </div>
+      <form className="navbar__filters" >
+         <Filter filterText="High ABV (over 6%)" term="abv" handleTick={handleTick} />
+         <Filter filterText="Classic range" term="classic" handleTick={handleTick} />
+         <Filter filterText="Acidic (ph over 4)" term="4ph" handleTick={handleTick} />
+      </form >
    )
 }
 
