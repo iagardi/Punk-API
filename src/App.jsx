@@ -23,31 +23,6 @@ const App = () => {
 
   console.log(`filterAbv at start is ${filterAbv}`)
 
-  const addFilter = () => {
-    switch (filterAbv) {
-      case (true && apiAddress.includes("abv_gt=6&")):
-        setApiAddress(apiAddress + "abv_gt=6&")
-        console.log(`filterabv true line ${filterAbv}: ${apiAddress}`)
-        break
-      case false:
-        setApiAddress(apiAddress.replace("abv_gt=6&", ""))
-        console.log(`filterabv false line ${filterAbv}: ${apiAddress}`)
-        break
-      default:
-    }
-
-    switch (filterClassic) {
-      case true:
-        setApiAddress(apiAddress + "brewed_before=01-2010&")
-        console.log(`filterClassic true line ${filterClassic}: ${apiAddress}`)
-        break
-      case false:
-        setApiAddress(apiAddress.replace("brewed_before=01-2010&", ""))
-        console.log(`filterClassic false line ${filterClassic}: ${apiAddress}`)
-        break
-      default:
-    }
-  }
 
   const handleTick = event => {
     const currentTick = event.target.id
@@ -66,7 +41,6 @@ const App = () => {
         break
       default:
     }
-    addFilter()
   }
 
   useEffect(() => {
