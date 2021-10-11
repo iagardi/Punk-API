@@ -30,7 +30,8 @@ const BeerCard = (props) => {
          <h2 className="beerlist__card--name">{beer.name}</h2>
          <img className="beerlist__card--image" src={beer.image_url} alt={beer.name} />
          <p>ABV: {beer.abv}%</p>
-
+         <p>Ph: {beer.ph}</p>
+         <p> First brewed: {beer.first_brewed} </p>
          {showInfo ? infoJSX : null}
          <Button buttonText="Read more" action={handleClick} />
       </div >

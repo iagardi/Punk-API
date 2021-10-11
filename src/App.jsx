@@ -9,7 +9,7 @@ const App = () => {
   // Search box
   const [beers, setBeers] = useState([]);
   const [searchTerm, setSearchTerm] = useState("")
-  const [apiAddress, setApiAddress] = useState("https://api.punkapi.com/v2/beers?per_page=80&")
+  const [apiAddress, setApiAddress] = useState("https://api.punkapi.com/v2/beers?per_page=80")
 
   const handleInput = event => {
     const input = event.target.value.toLowerCase()
@@ -17,41 +17,46 @@ const App = () => {
   }
 
   // Filters "abv_gt=6" "brewed_before=01-2010"
-  const [filterAbv, setFilterAbv] = useState(false)
-  const [filterClassic, setFilterClassic] = useState(false)
-  const [filterPh, setFilterPh] = useState(false)
+  const [filterAbv, setFilterAbv] = useState("")
+  const [filterClassic, setFilterClassic] = useState("")
+  const [filterPh, setFilterPh] = useState("")
 
   console.log(`filterAbv at start is ${filterAbv}`)
 
-
   const handleTick = event => {
     const currentTick = event.target.id
-    console.log(`you clicked "${event.target.id}"`)
+    console.log(`you clicked "${currentTick}"`)
 
     // setRefresh(refresh + 1)
     switch (currentTick) {
       case "abv":
-        setFilterAbv(!filterAbv)
+        if (filterAbv == "") { setFilterAbv("&abv_gt=6") } else { setFilterAbv("") }
         break
       case "classic":
-        setFilterClassic(!filterClassic)
+        if (filterClassic == "") { setFilterClassic("&brewed_before=01-2010") } else { setFilterClassic("") }
         break
       case "4ph":
         setFilterPh(!filterPh)
+        console.log(`filterPh is ${filterPh}`)
         break
       default:
     }
   }
 
   useEffect(() => {
-    fetch(`${apiAddress}`)
+    fetch(`${apiAddress}${filterAbv}${filterClassic}`)
       .then((response) => response.json())
       .then((data) => {
-        setBeers(data.filter(beer => { return beer.image_url !== "https://images.punkapi.com/v2/keg.png" }))
+        setBeers(data.map(beer => beer))
       })
-  }, [apiAddress])
+  }, [filterAbv, filterClassic])
 
-  const filteredBeers = beers.filter(beer => {
+  const lowPhBeers = beers.filter(beer => {
+    if (filterPh) { return beer.ph > 4 }
+    else { return beer }
+  })
+
+  const filteredBeers = lowPhBeers.filter(beer => {
     return beer.name.toLowerCase().includes(searchTerm)
   })
 
