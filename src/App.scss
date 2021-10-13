@@ -4,6 +4,7 @@
    margin: auto;
    height: 100vh;
    width: 80vw;
+   background-color: #d0f2fc;
 
    .header {
       width: 100%;
@@ -22,14 +23,14 @@
       display: flex;
 
       .navbar {
-         width: 15%;
+         width: 20%;
          min-width: 120px;
          height: 100%;
       }
 
       .beerlist {
          height: 100%;
-         width: 85%;
+         width: 80%;
       }
    }
 }

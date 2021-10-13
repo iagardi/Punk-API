@@ -1,19 +1,30 @@
-@use '../../assets/scss/base';
+@use '../../assets/scss/_base.scss'as *;
+
 
 .navbar__search {
    display: flex;
    width: 90%;
    margin: 10px auto;
    justify-content: space-between;
+   align-items: center;
+   height: 30px;
 
    &--input {
       height: 100%;
       width: 80%;
+      border-radius: 25px;
+      text-align: center;
+      border: 1px solid $color-main;
+   }
+
+   &--input:hover {
+      border: 2px solid $color-main;
    }
 
    &--button {
       height: 20px;
       width: auto;
       cursor: pointer;
+      color: red;
    }
 }

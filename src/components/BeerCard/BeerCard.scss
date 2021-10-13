@@ -1,8 +1,62 @@
 @use '../../assets/scss/_base.scss'as *;
 
-.beerlist__info {
-   width: 90%;
-   height: 90%;
-   background-color: red;
+.beerlist__card {
+   // box-shadow: 5px 5px 20px rgba($color-font, 0.25);
+   position: relative;
+   height: 50vh;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   overflow-y: auto;
+   border: 2px solid transparent;
+   padding: 10px;
+   background-color: transparent;
+   transition: 0.2s all ease-in-out;
 
+
+   .beerlist__card--name {
+      color: $color-font;
+      text-align: center;
+   }
+
+   .beerlist__card--tagline {
+      color: $color-font;
+      text-align: center;
+   }
+
+   .beerlist__card--image {
+      height: 50%;
+      object-fit: scale-down;
+      width: auto;
+   }
+
+   .beerlist__card--description {
+      text-align: center;
+      overflow-y: auto;
+      color: $color-font;
+   }
+
+   .beerlist__card--button {
+      background-color: transparent;
+   }
+
+}
+
+.beerlist__info {
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 10px;
+   width: 100%;
+   height: 100%;
+   background-color: lightgray;
+}
+
+.beerlist__card:hover {
+   // box-shadow: 15px 15px 15px 10px rgba($color-font, 0.20);
+   background-color: lightgray;
 }

@@ -2,5 +2,9 @@
 
 .button {
    border-radius: 30px;
-   padding: 5px 5px;
+   padding: 10px 35px;
+   border: none;
+   max-width: 60%;
+   margin: 0 auto;
+   background-color: $color-main;
 }

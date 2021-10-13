@@ -52,7 +52,7 @@ const App = () => {
   }, [filterAbv, filterClassic])
 
   const lowPhBeers = beers.filter(beer => {
-    if (filterPh) { return beer.ph > 4 }
+    if (filterPh) { return beer.ph < 4 }
     else { return beer }
   })
 
@@ -67,7 +67,7 @@ const App = () => {
     <div className="app">
       <header className="header"><img src={logo} alt="logo" className="header__logo" /></header>
       <div className="body">
-        <Nav handleInput={handleInput} handleTick={handleTick} />
+        <Nav handleInput={handleInput} handleTick={handleTick} beerList={filteredBeers} />
         <BeerList beersArr={filteredBeers} />
       </div>
     </div>

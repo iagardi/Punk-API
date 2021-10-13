@@ -1,6 +1,11 @@
 @use '../../assets/scss/base'as *;
 
-
 .navbar {
-   border: 1px solid black;
+   border-right: 1px solid black;
+
+   &__result {
+      width: 90%;
+      margin: auto;
+      margin-top: 25px;
+   }
 }

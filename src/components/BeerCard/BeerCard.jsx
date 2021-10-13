@@ -17,10 +17,13 @@ const BeerCard = (props) => {
 
    const infoJSX = (
       <div className="beerlist__info">
-         <h3 className="beerlist__card--tagline">{beer.tagline}</h3>
+         <div>
+            <h2 className="beerlist__card--name">{beer.name}</h2>
+            <h3 className="beerlist__card--tagline">{beer.tagline}</h3>
+         </div>
+         <p>{beer.description}</p>
          <p>First brewed: {beer.first_brewed}</p>
-         <p>Description: {beer.description}</p>
-
+         <p>Ph: {beer.ph}</p>
          <Button buttonText="Cool thanks" action={handleClick} />
       </div >
    )
@@ -30,10 +33,9 @@ const BeerCard = (props) => {
          <h2 className="beerlist__card--name">{beer.name}</h2>
          <img className="beerlist__card--image" src={beer.image_url} alt={beer.name} />
          <p>ABV: {beer.abv}%</p>
-         <p>Ph: {beer.ph}</p>
-         <p> First brewed: {beer.first_brewed} </p>
-         {showInfo ? infoJSX : null}
+
          <Button buttonText="Read more" action={handleClick} />
+         {showInfo ? infoJSX : null}
       </div >
    )
 }
