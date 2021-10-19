@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Punk-API/static/css/main.f0126ecc.chunk.css",
+    "main.js": "/Punk-API/static/js/main.f16f75b4.chunk.js",
+    "main.js.map": "/Punk-API/static/js/main.f16f75b4.chunk.js.map",
+    "runtime-main.js": "/Punk-API/static/js/runtime-main.e83f9206.js",
+    "runtime-main.js.map": "/Punk-API/static/js/runtime-main.e83f9206.js.map",
+    "static/js/2.4c240f14.chunk.js": "/Punk-API/static/js/2.4c240f14.chunk.js",
+    "static/js/2.4c240f14.chunk.js.map": "/Punk-API/static/js/2.4c240f14.chunk.js.map",
+    "static/js/3.4daa28a5.chunk.js": "/Punk-API/static/js/3.4daa28a5.chunk.js",
+    "static/js/3.4daa28a5.chunk.js.map": "/Punk-API/static/js/3.4daa28a5.chunk.js.map",
+    "index.html": "/Punk-API/index.html",
+    "static/css/main.f0126ecc.chunk.css.map": "/Punk-API/static/css/main.f0126ecc.chunk.css.map",
+    "static/js/2.4c240f14.chunk.js.LICENSE.txt": "/Punk-API/static/js/2.4c240f14.chunk.js.LICENSE.txt",
+    "static/media/brewdog_logo.733770c0.png": "/Punk-API/static/media/brewdog_logo.733770c0.png",
+    "static/media/search.d84aa702.svg": "/Punk-API/static/media/search.d84aa702.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e83f9206.js",
+    "static/js/2.4c240f14.chunk.js",
+    "static/css/main.f0126ecc.chunk.css",
+    "static/js/main.f16f75b4.chunk.js"
+  ]
+}
