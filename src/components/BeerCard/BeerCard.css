@@ -1,0 +1,58 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  color: #000000;
+}
+
+.beerlist__card {
+  position: relative;
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+  border: 2px solid transparent;
+  padding: 10px;
+  background-color: transparent;
+  transition: 0.2s all ease-in-out;
+}
+.beerlist__card .beerlist__card--name {
+  color: #000000;
+  text-align: center;
+}
+.beerlist__card .beerlist__card--tagline {
+  color: #000000;
+  text-align: center;
+}
+.beerlist__card .beerlist__card--image {
+  height: 50%;
+  object-fit: scale-down;
+  width: auto;
+}
+.beerlist__card .beerlist__card--description {
+  text-align: center;
+  overflow-y: auto;
+  color: #000000;
+}
+.beerlist__card .beerlist__card--button {
+  background-color: transparent;
+}
+
+.beerlist__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: lightgray;
+}
+
+.beerlist__card:hover {
+  background-color: lightgray;
+}
