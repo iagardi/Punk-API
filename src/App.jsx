@@ -9,7 +9,7 @@ const App = () => {
   // Search box
   const [beers, setBeers] = useState([]);
   const [searchTerm, setSearchTerm] = useState("")
-  const [apiAddress, setApiAddress] = useState("https://api.punkapi.com/v2/beers?per_page=80")
+  const [apiAddress, setApiAddress] = useState("https://api.punkapi.com/v2/beers?page=1&per_page=80")
 
   const handleInput = event => {
     const input = event.target.value.toLowerCase()
@@ -20,8 +20,6 @@ const App = () => {
   const [filterAbv, setFilterAbv] = useState("")
   const [filterClassic, setFilterClassic] = useState("")
   const [filterPh, setFilterPh] = useState("")
-
-  console.log(`filterAbv at start is ${filterAbv}`)
 
   const handleTick = event => {
     const currentTick = event.target.id
@@ -60,7 +58,7 @@ const App = () => {
     return beer.name.toLowerCase().includes(searchTerm)
   })
 
-  console.log(`filteredBeers length is ${filteredBeers.length}`)
+
 
 
   return <>
