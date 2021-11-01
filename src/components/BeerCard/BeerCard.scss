@@ -15,30 +15,34 @@
    transition: 0.2s all ease-in-out;
 
 
-   .beerlist__card--name {
+   &--name {
       color: $color-font;
       text-align: center;
    }
 
-   .beerlist__card--tagline {
+   &--tagline {
       color: $color-font;
       text-align: center;
    }
 
-   .beerlist__card--image {
+   &--image {
       height: 50%;
       object-fit: scale-down;
       width: auto;
    }
 
-   .beerlist__card--description {
+   &--description {
       text-align: center;
       overflow-y: auto;
       color: $color-font;
    }
 
-   .beerlist__card--button {
+   &--button {
       background-color: transparent;
+   }
+
+   &--abv {
+      text-align: center;
    }
 
 }
@@ -54,6 +58,7 @@
    width: 100%;
    height: 100%;
    background-color: lightgray;
+   align-items: center;
 }
 
 .beerlist__card:hover {
